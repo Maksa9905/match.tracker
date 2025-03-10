@@ -5,7 +5,7 @@ export type ButtonProps = {
   className?: string;
   onClick?: () => void;
   disabled?: boolean;
-  icon?: ReactNode;
+  icon?: (props: { disabled?: boolean }) => ReactNode;
 };
 
 const Button = ({
@@ -13,7 +13,7 @@ const Button = ({
   disabled,
   className: propClassName,
   onClick,
-  icon,
+  icon: Icon,
 }: ButtonProps) => {
   const backgroundColor = disabled
     ? "bg-dark-red active:bg-dark-red target:bg-dark-red"
@@ -31,7 +31,7 @@ const Button = ({
     >
       {children}
 
-      {icon}
+      {Icon && <Icon disabled={disabled} />}
     </button>
   );
 };

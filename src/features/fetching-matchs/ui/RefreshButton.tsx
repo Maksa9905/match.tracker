@@ -26,7 +26,7 @@ const RefreshButton = ({ state, ...props }: RefreshButtonProps) => {
     <Button
       {...props}
       onClick={handleRefresh}
-      icon={isLoading && isFetching ? <Loader /> : <RefreshIcon />}
+      icon={isLoading && isFetching ? Loader : RefreshIcon}
     >
       {t("refresh")}
     </Button>
