@@ -1,9 +1,9 @@
-interface DisabledProps {
+interface RefreshIconProps {
   disabled?: boolean;
   size?: number;
 }
 
-const RefreshIcon = ({ disabled, size }: DisabledProps) => {
+const RefreshIcon = ({ disabled, size }: RefreshIconProps) => {
   return (
     <svg
       width={size ?? "26"}
